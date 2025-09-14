@@ -1,0 +1,59 @@
+fastapi
+uvicorn
+requests
+python-dotenv
+pydantic
+langchain
+langchain-community
+faiss-cpu
+sentence-transformers
+azure-storage-blob
+python-multipart
+huggingface_hub
+google-generativeai
+edge_tts
+pygame
+SpeechRecognition
+eel
+googletrans==4.0.0-rc1
+# S.U.N.D.A.Y Core System Requirements
+# Optimized and professional AI assistant system
+
+# Core dependencies
+torch
+transformers
+numpy
+
+# Speech recognition and synthesis
+SpeechRecognition
+edge-tts
+pygame
+pyaudio
+
+# Web automation
+selenium
+undetected-chromedriver
+webdriver-manager
+
+# System utilities
+psutil
+speedtest-cli
+requests
+
+# Web framework (for web interface)
+flask
+flask-cors
+
+# Data processing
+pandas
+scikit-learn
+
+# Utilities
+python-dotenv
+pathlib2
+dataclasses-json
+
+# Development and testing
+pytest
+black
+flake8

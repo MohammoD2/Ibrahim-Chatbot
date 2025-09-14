@@ -1,0 +1,82 @@
+Mohammod Ibrahim Hossain
+
+Personal Information:
+- Name: Mohammod Ibrahim Hossain
+- Profession: Machine Learning Engineer, Data Scientist, MLOps Specialist
+- Languages: English (Fluent), Bangla (Native)
+
+Professional Summary:
+Mohammod Ibrahim Hossain is a detail-oriented expert in Data Science, Machine Learning, and MLOps, with extensive experience in end-to-end model development, deployment, and optimization. He has a proven track record of delivering high-accuracy solutions, such as real estate price predictions with 95% accuracy, using tools like Python, NLP, Docker, and AWS. His expertise lies in creating data-driven insights through sentiment analysis, recommendation engines, and automated ML pipelines for scalable AI solutions.
+
+Skills:
+- Machine Learning: Supervised & Unsupervised Learning, A/B Testing, Model Selection, Hyperparameter Tuning, Ensemble Methods, Natural Language Processing (NLP), Classification
+- Deep Learning: Neural Networks, CNNs, RNNs, Transfer Learning, Model Optimization, TensorFlow
+- Data Science: Data Cleaning, Data Pipelines, Feature Engineering, Data Representation (SVG/JSON), Exploratory Data Analysis (EDA), SQL & NoSQL Databases, Statistical Analysis, Data Preprocessing, Data Visualization, Advanced Statistics
+- MLOps: CI/CD, Docker, Kubernetes, Automated Testing, Version Control, Model Monitoring, AWS (EC2, S3, SageMaker)
+- Tools & Libraries: Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn, Plotly, Git, DVC, MLflow
+- Programming Languages: Python (Object-Oriented Programming), SQL, Flask
+- Soft Skills: Time Management, Teamwork, Stakeholder Collaboration, Multitasking, Problem-Solving
+
+Projects:
+1. Real Estate Model App
+   - Technologies: Python, Docker, AWS, CI/CD, Streamlit, Random Forest, DVC, GitHub Actions
+   - Description: Built an AI-powered tool for real estate price prediction, data analysis, and apartment recommendations. Achieved 62% to 95% accuracy, enabling data-driven property investment decisions.
+   - Portfolio Link: https://mohammod2.github.io/Protfolio/my.html
+
+2. Sentiment Analysis
+   - Technologies: TensorFlow, Scikit-Learn, NLP, MLOps, Pandas, Logistic Regression, TF-IDF, Streamlit, GitHub Actions
+   - Description: Developed an NLP model to classify text sentiment (positive, negative, neutral, suicidal). Achieved over 85% tracking accuracy with deep sort and an average accuracy of 75%.
+
+3. Personal AI Chatbot
+   - Technologies: Python, NLP, Streamlit, Deep Learning, ML
+   - Description: Developed and deployed a chatbot with dynamic, context-aware interactions and a user-friendly interface, focusing on personalized responses and seamless engagement.
+
+4. Movie Recommendation System
+   - Technologies: Python, Pandas, NumPy, Scikit-Learn, MLOps, Docker, Git Action, Streamlit
+   - Description: Built a recommendation system using collaborative filtering to suggest films based on user preferences. Improved similarity score from 72% to 90%. Deployed via Streamlit for real-time recommendations.
+
+5. YouTube Comment Analyzer
+   - Technologies: NLP, AWS, MLOps, Scientific Visualization
+   - Description: Developed an NLP-based sentiment analysis tool to analyze YouTube comment trends using AWS cloud services, ML models, and data visualization techniques.
+   - Portfolio Link: https://mohammod2.github.io/Protfolio/my.html
+
+6. CBC Report Checker
+   - Technologies: Medical Data Analysis, ML Deployment
+   - Description: Developed a medical web app to analyze CBC reports and provide health insights, handling data preprocessing, feature engineering, and model deployment.
+
+Work Experience:
+1. Mashover (Clothing Brand) - Data Science & Machine Learning Specialist
+   - Analyzed customer behavior to develop targeted marketing strategies, increasing local and online sales from 68% to 71%.
+   - Built predictive models to forecast demand and optimize inventory, reducing overstock and improving product availability.
+   - Deployed ML models to enhance sales processes, making them more adaptive and data-driven.
+
+2. Real Estate Price Prediction - AI & MLOps Deployment
+   - Developed machine learning models to predict real estate prices with 62% to 95% accuracy.
+   - Optimized model interpretability with intuitive visualizations for price trends and demand forecasting.
+   - Automated model pipelines, integrated real-time data analysis, and deployed APIs via Flask and FastAPI.
+   - Implemented monitoring and logging with MLflow and CloudWatch for stability and performance tracking.
+
+Education:
+1. CampusX DSMP 2.0
+   - Focus: Data Science, Machine Learning, MLOps
+   - Skills Gained: Python, Machine Learning, MLOps, Model Deployment, CI/CD, Docker, AWS
+   - Projects: Model deployment, data pipeline automation, statistical analysis
+
+2. Govt. Bangla College (August 2023 - Present)
+   - Relevant Coursework: Mathematics, Physics, Computer Science Fundamentals
+   - Self-Led Projects:
+     - Built a regression model to predict exam scores using Python.
+     - Designed a dashboard to visualize scientific data with Matplotlib.
+
+Certifications:
+- CampusX DSMP 2.0 Certificate
+  - Demonstrated proficiency in Data Science, Machine Learning, and MLOps.
+
+References:
+- Md Sahadad Hossain Parvez
+  - Veterinary Officer, Bangladesh Military Army
+  - Contact: 01769333726, parvezvet.86@gmail.com
+  - Reference Link: https://mohammod2.github.io/Protfolio/Reference.html
+
+Portfolio:
+- Website: https://mohammod2.github.io/Protfolio/
