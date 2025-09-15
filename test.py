@@ -1,41 +1,27 @@
 import requests
+import json
 
-def test_chat(key: str , msg: str):
-    # API endpoint
-    url = "http://localhost:8000/chat"
+response = requests.post(
+  url="https://openrouter.ai/api/v1/chat/completions",
+  headers={
+    "Authorization": "Bearer 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",
+    "Content-Type": "application/json",
+    "HTTP-Referer": "<YOUR_SITE_URL>", # Optional. Site URL for rankings on openrouter.ai.
+    "X-Title": "<YOUR_SITE_NAME>", # Optional. Site title for rankings on openrouter.ai.
+  },
+  data=json.dumps({
+    "model": "deepseek/deepseek-chat-v3.1:free",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hello , my name is ibrahim "
+      }
+    ],
     
-    # Test message with key
-    payload = {
-        "message": msg,
-        "key": key
-    }
-    
-    try:
-        # Send request
-        response = requests.post(url, json=payload)
-        
-        # Print status code
-        print(f"\nTesting with key: {key}")
-        print("Status Code:", response.status_code)
-        
-        # Get response data
-        response_data = response.json()
-        
-        # Print the message
-        print("Response Message:", response_data.get("message", "No message in response"))
-        
-        # If there was an error, print the full response
-        if response.status_code != 200:
-            print("Full Response:", response_data)
-            
-    except requests.exceptions.ConnectionError:
-        print("Error: Could not connect to the API. Make sure the server is running on http://localhost:8000")
-    except Exception as e:
-        print(f"Error: {str(e)}")
-
-if __name__ == "__main__":
-    # Test with Macdora key
-    # test_chat("macdora_secret_key_2024")
-    
-    # Test with Bulipe Tech key
-    test_chat("bulipe_secret_key_2024" , "where are you working") 
+  })
+)
+# Extract answer
+if response.status_code == 200:
+    result = response.json()
+    message = result["choices"][0]["message"]["content"]
+    print("Bot reply:", message)

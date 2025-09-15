@@ -4,8 +4,9 @@ import faiss
 import numpy as np
 from sentence_transformers import SentenceTransformer
 import logging
+import requests
+import json
 from dotenv import load_dotenv
-import google.generativeai as genai
 
 # Load environment variables
 load_dotenv()
@@ -20,14 +21,8 @@ logger = logging.getLogger(__name__)
 # Configuration
 PROCESSED_DATA_DIR = "processed_data"
 MODEL_NAME = "all-MiniLM-L6-v2"
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
-GEMINI_MODEL = "gemini-1.5-flash"  # or "gemini-1.5-pro" for more advanced features
-
-# Configure Gemini API
-if GEMINI_API_KEY:
-    genai.configure(api_key=GEMINI_API_KEY)
-else:
-    logger.warning("GEMINI_API_KEY not found in environment variables")
+OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
+OPENROUTER_MODEL = "deepseek/deepseek-chat-v3.1:free"
 
 # Initialize embeddings model
 embeddings_model = SentenceTransformer(MODEL_NAME)
@@ -100,7 +95,7 @@ class SimpleChatManager:
 
     def generate_response(self, query: str, context: list, product: str) -> str:
         if not context:
-            return f"I am a servent of Mohammod Ibrahim Hossain, an advanced AI built to deliver precise answers."
+            return f"I am a servant of Mohammod Ibrahim Hossain, an advanced AI built to deliver precise answers."
 
         prompt = f"""Context:\n{chr(10).join(context)}\n\nInstructions:\n
         You are a loyal and devoted servant of Mohammod Ibrahim Hossain. Always be polite, friendly, and respectful in your responses.
@@ -115,12 +110,30 @@ class SimpleChatManager:
         """
 
         try:
-            model = genai.GenerativeModel(GEMINI_MODEL)
-            response = model.generate_content(prompt)
-            return response.text
+            response = requests.post(
+                url="https://openrouter.ai/api/v1/chat/completions",
+                headers={
+                    "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+                    "Content-Type": "application/json",
+                },
+                data=json.dumps({
+                    "model": OPENROUTER_MODEL,
+                    "messages": [
+                        {"role": "user", "content": prompt}
+                    ],
+                })
+            )
+
+            if response.status_code == 200:
+                result = response.json()
+                return result["choices"][0]["message"]["content"]
+            else:
+                logger.error(f"OpenRouter API error: {response.text}")
+                return "Sorry, I faced an issue while generating the response."
         except Exception as e:
             logger.error(f"Error generating response: {str(e)}")
-            return "System interruption detected. Attempting to restore my response capabilities. Please try again shortly."
+            return "System interruption detected. Please try again shortly."
+
 # Initialize the simple chat manager
 simple_chat_manager = SimpleChatManager()
 
@@ -130,4 +143,4 @@ def chatbot(message: str, product: str = "Ibrahim") -> str:
     """
     relevant_chunks = simple_chat_manager.search_similar_chunks(message, product)
     response = simple_chat_manager.generate_response(message, relevant_chunks, product)
-    return response 
+    return response
