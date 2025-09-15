@@ -9,8 +9,8 @@ from Chatbot import chatbot   # assuming you saved your code in chatbot.py
 load_dotenv()
 
 # --- Page Configuration ---
-st.set_page_config(page_title="Ibrahim's Chatbot", page_icon="🤖", layout="centered")
-st.title("Loyal Servant of Ibrahim ")
+st.set_page_config(page_title="Ibrahim's Chatbot", layout="centered")
+st.title("Welcome TO Ibrahim's Chatbot")
 
 # --- Sidebar Settings ---
 with st.sidebar:
