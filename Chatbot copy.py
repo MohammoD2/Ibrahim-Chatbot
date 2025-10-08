@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 # Configuration
 PROCESSED_DATA_DIR = "processed_data"
 MODEL_NAME = "all-MiniLM-L6-v2"
-OPENROUTER_API_KEY = st.secrets["OPENROUTER_API_KEY"]
+OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
 OPENROUTER_MODEL = "deepseek/deepseek-chat-v3.1:free"
 
 # Initialize embeddings model
