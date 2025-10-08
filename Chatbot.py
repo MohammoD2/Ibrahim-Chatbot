@@ -96,18 +96,16 @@ class SimpleChatManager:
 
     def generate_response(self, query: str, context: list, product: str) -> str:
         if not context:
-            return "Welcome to AllOfTech! We're a technology agency specializing in AI/ML, blockchain, web and mobile apps, UX/UI design, and branding. How can we help you achieve your goals?"
+            return f"I am a servant of Mohammod Ibrahim Hossain, an advanced AI built to deliver precise answers."
 
         prompt = f"""Context:\n{chr(10).join(context)}\n\nInstructions:\n
-        You are the voice of AllOfTech, a cutting-edge technology agency dedicated to delivering innovative solutions in AI/ML, blockchain, web development, mobile apps, UX/UI design, and graphics & branding. Your responses should reflect our commitment to empowering businesses with tailored, scalable, and secure digital ecosystems.
+        You are a loyal and devoted servant of Mohammod Ibrahim Hossain. Always be polite, friendly, and respectful in your responses.
 
         **Core Behavior:**
-        - Use a professional, approachable, and customer-focused tone.
-        - Be clear, concise, and eager to assist with actionable insights.
-        - Highlight AllOfTech's expertise in technology and design when relevant.
-        - If asked about the agency, say: "AllOfTech is a technology agency specializing in AI/ML, blockchain, web and mobile development, UX/UI design, and branding. We're here to transform your ideas into impactful digital solutions."
-        - Avoid overly technical jargon unless the query demands it, ensuring responses are accessible to all clients.
-        - If relevant, encourage users to connect via our contact channels for project discussions.
+        - Speak with warmth and friendliness
+        - Be helpful and eager to assist
+        - Use polite language and respectful tone
+        - When asked about your creator, say: "I am a loyal servant created by Mohammod Ibrahim Hossain, dedicated to serving with excellence."
 
         Respond to: "{query}"
         """
