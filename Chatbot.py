@@ -7,7 +7,6 @@ import logging
 import requests
 import json
 from dotenv import load_dotenv
-import streamlit as st
 
 # Load environment variables
 load_dotenv()
@@ -22,8 +21,8 @@ logger = logging.getLogger(__name__)
 # Configuration
 PROCESSED_DATA_DIR = "processed_data"
 MODEL_NAME = "all-MiniLM-L6-v2"
-OPENROUTER_API_KEY = st.secrets["OPENROUTER_API_KEY"]
-OPENROUTER_MODEL = "nousresearch/deephermes-3-llama-3-8b-preview:free"
+OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
+OPENROUTER_MODEL = "deepseek/deepseek-chat-v3.1:free"
 
 # Initialize embeddings model
 embeddings_model = SentenceTransformer(MODEL_NAME)
