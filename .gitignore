@@ -7,3 +7,4 @@ venv/
 .env.production.local
 .cursorignore
 test_llm.py
+test.py
