@@ -1,0 +1,37 @@
+name: RAG Pipeline CI/CD
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+  # Optionally, you can add more triggers (e.g., on file upload to Azure)
+
+jobs:
+  process-pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run RAG processing pipeline
+        run: |
+          python process_pipeline.py
+
+      # (Optional) Add Azure login/upload steps here if you want to automate upload of processed files
+      # - name: Azure Login
+      #   uses: azure/login@v1
+      #   with:
+      #     creds: ${{ secrets.AZURE_CREDENTIALS }}
+      # - name: Upload to Azure Blob Storage
+      #   run: |
+      #     # Add your upload script/command here 
