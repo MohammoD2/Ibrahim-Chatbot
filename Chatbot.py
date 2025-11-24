@@ -23,7 +23,7 @@ logger = logging.getLogger(__name__)
 PROCESSED_DATA_DIR = "processed_data"
 MODEL_NAME = "all-MiniLM-L6-v2"
 OPENROUTER_API_KEY = st.secrets["OPENROUTER_API_KEY"]
-OPENROUTER_MODEL = "meta-llama/llama-3.3-8b-instruct:free"
+OPENROUTER_MODEL = "meta-llama/llama-3.3-70b-instruct:free"
 
 # Initialize embeddings model
 embeddings_model = SentenceTransformer(MODEL_NAME)
